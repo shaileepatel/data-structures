@@ -37,6 +37,9 @@ bstMethods.insert = function(value) {
 
 bstMethods.contains = function(target) {
   var helper = function(node) {
+    if (node === null) {
+      return false;
+    }
     if (node.value === target) {
       return true;
     }
